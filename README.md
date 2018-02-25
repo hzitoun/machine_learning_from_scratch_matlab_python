@@ -5,10 +5,10 @@ It's an excellent free online Stanford University Coursera machine learning clas
 This course is a must-take for anyone who is interested in Machine Learning. The course is taught by Andrew Ng a genius and an excellent popularizer, wich is a rare combination. 
 
 ## Python implementation
-Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement all of them in python 
+Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement each assignment in Python using only NumPy, SciPy, and matplotlib
 https://github.com/hzitoun/coursera_machine_learning_course/tree/master/src/assignments/python
 
 ## Matlab implementation
 
-Assignment in Mtalbe
+Assignment in Matlab
 https://github.com/hzitoun/coursera_machine_learning_course/tree/master/src/assignments/octave&matlab
