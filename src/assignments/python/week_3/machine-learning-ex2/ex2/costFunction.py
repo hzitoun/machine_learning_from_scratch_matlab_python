@@ -17,6 +17,6 @@ def costFunction(theta, X, y, reg_lambda = None, flattenResult=False):
     J = (1.0/m) * np.sum(np.subtract(cost_y_0, cost_y_1))
     
     if reg_lambda:
-        J =  J + (reg_lambda/(2 * m)) * np.sum(np.power(theta, 2))
+        J =  J + (reg_lambda/(2 * m)) * np.sum(np.power(theta[1:], 2)) #don't regularize theta[0, :]
    
     return J
