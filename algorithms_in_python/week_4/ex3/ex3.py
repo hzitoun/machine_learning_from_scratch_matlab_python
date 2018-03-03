@@ -16,6 +16,7 @@
 %  or any other files other than those mentioned above.
 %"""
 
+from lrCostFunction import lrCostFunction
 from displayData import displayData
 import matplotlib.pyplot as plt
 import numpy as np
@@ -42,14 +43,10 @@ m,_ = X.shape
 
 Y = np.loadtxt('MNIST_DATA_LABEL.csv', delimiter =",").reshape(m, 1)
 
-
-
 #Randomly select 100 data points to display
 rand_indices = np.random.choice(m, 100)
 
-print(Y[rand_indices])
-
-displayData(X[rand_indices])
+#displayData(X[rand_indices])
 
 
 plt.show(block=False)
@@ -57,41 +54,49 @@ plt.show(block=False)
 print('Program paused. Press enter to continue.\n')
 pause()
 
+
+
+# ============ Part 2a: Vectorize Logistic Regression ============
+#  In this part of the exercise, you will reuse your logistic regression
+#  code from the last exercise. You task here is to make sure that your
+#  regularized logistic regression implementation is vectorized. After
+#  that, you will implement one-vs-all classification for the handwritten
+#  digit dataset.
+#
+
+# Test case for lrCostFunction
+print('\nTesting lrCostFunction() with regularization')
+
+theta_t = np.array([[-2], [-1], [1], [2]])
+
+data =  np.arange(1, 16).reshape(3, 5).T
+
+X_t = np.c_[np.ones((5,1)), data/10]
+
+y_t =  (np.array([[1], [0], [1], [0], [1]]) >= 0.5) * 1
+
+lambda_t = 3
+
+J, grad = lrCostFunction(theta_t, X_t, y_t, lambda_t)
+
+print('\nCost: %f\n', J)
+print('Expected cost: 2.534819\n')
+print('Gradients:\n')
+print(' %f \n', grad)
+print('Expected gradients:\n')
+print(' 0.146561\n -0.548558\n 0.724722\n 1.398003\n')
+
+print('Program paused. Press enter to continue.\n')
+pause()
+
 """
-
-%% ============ Part 2a: Vectorize Logistic Regression ============
-%  In this part of the exercise, you will reuse your logistic regression
-%  code from the last exercise. You task here is to make sure that your
-%  regularized logistic regression implementation is vectorized. After
-%  that, you will implement one-vs-all classification for the handwritten
-%  digit dataset.
-%
-
-% Test case for lrCostFunction
-fprintf('\nTesting lrCostFunction() with regularization');
-
-theta_t = [-2; -1; 1; 2];
-X_t = [ones(5,1) reshape(1:15,5,3)/10];
-y_t = ([1;0;1;0;1] >= 0.5);
-lambda_t = 3;
-[J grad] = lrCostFunction(theta_t, X_t, y_t, lambda_t);
-
-fprintf('\nCost: %f\n', J);
-fprintf('Expected cost: 2.534819\n');
-fprintf('Gradients:\n');
-fprintf(' %f \n', grad);
-fprintf('Expected gradients:\n');
-fprintf(' 0.146561\n -0.548558\n 0.724722\n 1.398003\n');
-
-fprintf('Program paused. Press enter to continue.\n');
-pause;
 %% ============ Part 2b: One-vs-All Training ============
-fprintf('\nTraining One-vs-All Logistic Regression...\n')
+print('\nTraining One-vs-All Logistic Regression...\n')
 
 lambda = 0.1;
 [all_theta] = oneVsAll(X, y, num_labels, lambda);
 
-fprintf('Program paused. Press enter to continue.\n');
+print('Program paused. Press enter to continue.\n');
 pause;
 
 
@@ -99,6 +104,6 @@ pause;
 
 pred = predictOneVsAll(all_theta, X);
 
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
+print('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 
 """

@@ -5,6 +5,13 @@ function [J, grad] = lrCostFunction(theta, X, y, lambda)
 %   theta as the parameter for regularized logistic regression and the
 %   gradient of the cost w.r.t. to the parameters. 
 
+
+
+disp(theta)
+disp(X)
+disp(y)
+disp(lambda)
+
 m = length(y); % number of training examples
 prediction = sigmoid(X * theta);
 
