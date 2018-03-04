@@ -20,9 +20,10 @@ X = [ones(m, 1) X];
 for c = 1:num_labels
     %     Set Initial theta
     initial_theta = zeros(n + 1, 1);
+    disp('optimizing theta ' + c)
     %
     % Set options for fminunc
-    options = optimset('GradObj', 'on', 'MaxIter', 50);
+    options = optimset('GradObj', 'on', 'MaxIter', 50,'Display','off');
     %
     % Run fmincg to obtain the optimal theta
     % This function will return theta and the cost

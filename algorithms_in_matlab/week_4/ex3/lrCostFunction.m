@@ -7,11 +7,6 @@ function [J, grad] = lrCostFunction(theta, X, y, lambda)
 
 
 
-disp(theta)
-disp(X)
-disp(y)
-disp(lambda)
-
 m = length(y); % number of training examples
 prediction = sigmoid(X * theta);
 
