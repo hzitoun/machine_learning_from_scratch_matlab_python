@@ -1,10 +1,7 @@
 function p = originalGaussian(X, mu, Sigma2)
 %
-%p(x)=p(x1;?1,?21) * p(x2;?2,?22)?p(xn;?n,?2n)
+%p(x)=p(x1;mu1,sig²1) * p(x2;mu2,sig²2) ... p(xn;mun,sig²n)
 %
-n = size(X, 2);
-p = 1;
-for i=1:n
-  p = p .* (1/(sqrt(2 .* pi .* Sigma2(i)))) .* exp(- ((X(:, i) - mu(i)) .^ 2) / (2 * Sigma2(i)));
-end
+p =  (1./(sqrt(2 .* pi .* Sigma2))) .* exp(- ((X - mu) .^ 2) ./ (2 * Sigma2));
+p = prod(p, 2); %  products of each row
 end
