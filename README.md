@@ -14,9 +14,9 @@ This course is a must-take for anyone who is interested in Machine Learning. It 
 8.  **Principal component analysis (PCA)** to perform dimensionality reduction
 9.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
 10. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
-## Python implementation
-Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement each assignment in Python using only NumPy, SciPy, and matplotlib
+## 🐍 Python Implementation
+Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement each assignment in Python using only NumPy, SciPy, and Matplotlib
 https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python
-## Matlab implementation
+## Matlab Implementation
 Assignments in Matlab
 https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_matlab
