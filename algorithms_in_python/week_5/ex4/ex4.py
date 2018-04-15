@@ -99,7 +99,7 @@ reg_lambda = 0;
 
 J, grad = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, reg_lambda)
 
-print('Cost at parameters (loaded from ex4weights) should be about 0.287629 \n', J)
+print('Cost at parameters (loaded from ex4weights) should be about 10.4414339388 \n', J)
 
 print('\nProgram paused. Press enter to continue.\n')
 pause()
@@ -117,7 +117,7 @@ reg_lambda = 1
 
 J, grad = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, reg_lambda)
 
-print('Cost at parameters (loaded from ex4weights): should be about 0.383770 ', J)
+print('Cost at parameters (loaded from ex4weights): should be about 10.5375744448 ', J)
 
 print('Program paused. Press enter to continue.\n')
 pause()
