@@ -9,7 +9,7 @@ def polynomialDegreeCurve(X, y, Xval, yval, reg_lambda):
     """Error cruve in function of degree of polynimal d
     """
     
-    dimensions = np.arange(1, 101).reshape(-1, 1)
+    dimensions = np.arange(1, 80).reshape(-1, 1)
     
     # You need to return these variables correctly.
     error_train = np.zeros((len(dimensions), 1))

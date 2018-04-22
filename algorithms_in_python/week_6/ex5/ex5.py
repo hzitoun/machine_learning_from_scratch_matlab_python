@@ -1,19 +1,6 @@
 """ Machine Learning Online Class
-#  Exercise 5 | Regularized Linear Regression and Bias-Variance
-#
-#  Instructions
-#  ------------
-# 
-#  This file contains code that helps you get started on the
-#  exercise. You will need to complete the following functions:
-#
-#     linearRegCostFunction.m
-#     learningCurve.m
-#     validationCurve.m
-#
-#  For this exercise, you will not need to change any code in this file,
-#  or any other files other than those mentioned above.
-#"""
+  Exercise 5 | Regularized Linear Regression and Bias-Variance
+"""
 
 from linearRegCostFunction import linearRegCostFunction
 from trainLinearReg import trainLinearReg
@@ -32,11 +19,11 @@ import numpy as np
 def pause():
     input("")
 
-## =========== Part 1: Loading and Visualizing Data =============
-#  We start the exercise by first loading and visualizing the dataset. 
-#  The following code will load the dataset into your environment and plot
-#  the data.
-#
+""" =========== Part 1: Loading and Visualizing Data =============
+  We start the exercise by first loading and visualizing the dataset. 
+  The following code will load the dataset into your environment and plot
+  the data.
+""" 
 
 # Load Training Data
 print('Loading and Visualizing Data ...\n')
@@ -70,10 +57,10 @@ pause()
 
 
 
-## =========== Part 2: Regularized Linear Regression Cost =============
-#  You should now implement the cost function for regularized linear 
-#  regression. 
-#
+""" =========== Part 2: Regularized Linear Regression Cost =============
+ You should now implement the cost function for regularized linear 
+  regression. 
+"""
 
 theta = np.array([[1], [1]])
 new_input = np.c_[np.ones((m, 1)), X]
@@ -87,10 +74,10 @@ pause()
 
 
 
-## =========== Part 3: Regularized Linear Regression Gradient =============
-#  You should now implement the gradient for regularized linear 
-#  regression.
-#
+""" =========== Part 3: Regularized Linear Regression Gradient =============
+  You should now implement the gradient for regularized linear 
+  regression.
+"""
 
 print('Gradient at theta = [1 ; 1]:  [{}; {}] \n(this value should be about [-15.303016; 598.250744])\n'.format(grad[0], grad[1]))
 
@@ -98,14 +85,14 @@ print('Program paused. Press enter to continue.\n')
 pause()
 
 
-## =========== Part 4: Train Linear Regression =============
-#  Once you have implemented the cost and gradient correctly, the
-#  trainLinearReg function will use your cost function to train 
-#  regularized linear regression.
-# 
-#  Write Up Note: The data is non-linear, so this will not give a great 
-#                 fit.
-#
+""" =========== Part 4: Train Linear Regression =============
+  Once you have implemented the cost and gradient correctly, the
+  trainLinearReg function will use your cost function to train 
+  regularized linear regression.
+ 
+  Write Up Note: The data is non-linear, so this will not give a great 
+                 fit.
+"""
 
 #  Train linear regression with lambda = 0
 reg_lambda = 0
@@ -124,12 +111,12 @@ pause()
 
 
 
-## =========== Part 5: Learning Curve for Linear Regression =============
-#  Next, you should implement the learningCurve function. 
-#
-#  Write Up Note: Since the model is underfitting the data, we expect to
-#                 see a graph with "high bias" -- Figure 3 in ex5.pdf 
-#
+""" =========== Part 5: Learning Curve for Linear Regression =============
+  Next, you should implement the learningCurve function. 
+
+  Write Up Note: Since the model is underfitting the data, we expect to
+                 see a graph with "high bias" -- Figure 3 in ex5.pdf 
+"""
 
 reg_lambda = 0
 new__training_input = np.c_[np.ones((m, 1)), X]
@@ -157,10 +144,10 @@ pause()
 
 
 
-## =========== Part 6: Feature Mapping for Polynomial Regression =============
-#  One solution to this is to use polynomial regression. You should now
-#  complete polyFeatures to map each example into its powers
-#
+"""  =========== Part 6: Feature Mapping for Polynomial Regression =============
+  One solution to this is to use polynomial regression. You should now
+  complete polyFeatures to map each example into its powers
+""" 
 
 p = 6
 
@@ -188,12 +175,12 @@ pause()
 
 
 
-## =========== Part 7: Learning Curve for Polynomial Regression =============
-#  Now, you will get to experiment with polynomial regression with multiple
-#  values of lambda. The code below runs polynomial regression with 
-#  lambda = 0. You should try running the code with different values of
-#  lambda to see how the fit and learning curve change.
-#
+"""  =========== Part 7: Learning Curve for Polynomial Regression =============
+  Now, you will get to experiment with polynomial regression with multiple
+  values of lambda. The code below runs polynomial regression with 
+  lambda = 0. You should try running the code with different values of
+  lambda to see how the fit and learning curve change.
+""" 
 
 reg_lambda = 3
 theta = trainLinearReg(X_poly, y, reg_lambda)
@@ -232,8 +219,9 @@ print('Program paused. Press enter to continue.\n')
 pause()
 
 
-## =========== New Part :D : plot curves in function of polynomial degree======
-##  use this to select the  "best" polynomial degree value p.
+"""  =========== New Part :D : plot curves in function of polynomial degree======
+  use this to select the  "best" polynomial degree value p.
+""" 
 
 
 plt.figure(5) #new window
@@ -251,11 +239,11 @@ print('Program paused. Press enter to continue.\n')
 pause()
 
 
-## =========== Part 8: Validation for Selecting Lambda =============
-#  You will now implement validationCurve to test various values of 
-#  lambda on a validation set. You will then use this to select the
-#  "best" lambda value.
-#
+"""  =========== Part 8: Validation for Selecting Lambda =============
+  You will now implement validationCurve to test various values of 
+  lambda on a validation set. You will then use this to select the
+  "best" lambda value.
+""" 
 
 plt.figure(6) #new window
 lambda_vec, error_train, error_val = validationCurve(X_poly, y, X_poly_val, yval)
