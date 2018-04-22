@@ -1,6 +1,6 @@
 import numpy as np
 import scipy.optimize as op
-import linearRegCostFunction as linearRegCostFunction
+from linearRegCostFunction import linearRegCostFunction
 
 def trainLinearReg(X, y, reg_lambda):
     """TRAINLINEARREG Trains linear regression given a dataset (X, y) and a
@@ -12,12 +12,13 @@ def trainLinearReg(X, y, reg_lambda):
     
     #Initialize Theta
     initial_theta = np.zeros((X.shape[1], 1))
-    
+        
     # Create "short hand" for the cost function to be minimized
-    costFunction = lambda t :  linearRegCostFunction(X, y, t, reg_lambda, returnOnlyCost = True)
+    costFunction = lambda theta :  linearRegCostFunction(X, y, theta, reg_lambda, returnOnlyCost = True)
     
-    gradFunc = lambda t : linearRegCostFunction(X, y, t, reg_lambda, returnOnlyGrad = True, flattenResult = True)
+    gradFunc = lambda theta : linearRegCostFunction(X, y, theta, reg_lambda, returnOnlyGrad = True, flattenResult = True)
     
+    #should finish learning (reach local minima) in 4 iterations
     max_iter = 200
     
        # Run fmincg to obtain the optimal theta

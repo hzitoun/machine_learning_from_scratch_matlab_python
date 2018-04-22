@@ -7,9 +7,9 @@ def featureNormalize(X):
        is 1. This is often a good preprocessing step to do when
        working with learning algorithms."""
     
-    mu = np.mean(X)
+    mu = np.mean(X,  axis=0) #mean of each column
     X_norm = X - mu
-    sigma = np.std(X_norm)
+    sigma = np.std(X_norm, axis=0) #standard deviation for each column
     X_norm = X_norm / sigma
     
     return X_norm, mu, sigma

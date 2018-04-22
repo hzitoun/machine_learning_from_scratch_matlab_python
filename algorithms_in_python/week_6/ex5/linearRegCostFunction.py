@@ -1,6 +1,6 @@
 import numpy as np
 
-def linearRegCostFunction(X, y, theta, reg_lambda):
+def linearRegCostFunction(X, y, theta, reg_lambda, returnOnlyGrad= None, returnOnlyCost = None, flattenResult = None ):
     """Computes cost and gradient for regularized linear 
      regression with multiple variables
        [J, grad] = LINEARREGCOSTFUNCTION(X, y, theta, lambda) computes the 
@@ -11,6 +11,12 @@ def linearRegCostFunction(X, y, theta, reg_lambda):
     # Initialize some useful values
     m = len(y) # number of training examples
     
+
+    theta_column_size = y.shape[1]
+    theta_row_size  = X.shape[1]
+    
+    theta = theta.reshape(theta_row_size, theta_column_size)
+    
     predictions = X.dot(theta)
     
     errors = predictions - y
@@ -20,8 +26,15 @@ def linearRegCostFunction(X, y, theta, reg_lambda):
     
     grad = (1.0/m) * X.T.dot(errors)
         
-    column_size = grad.shape[1]
-        
-    grad = np.r_[grad[0, :].reshape(1, column_size), grad[1:, :] + (reg_lambda /m) * theta[1:, :]]
+    #we dont regularize theta[0] (bias)
+    grad = np.r_[grad[0, :].reshape(1, theta_column_size), grad[1:, :] + (reg_lambda /m) * theta[1:, :]]
+    
+    if returnOnlyGrad:
+        if flattenResult:
+            return grad.flatten()
+        return grad
+    
+    if returnOnlyCost:
+        return J
     
     return J, grad

@@ -6,10 +6,10 @@ def polyFeatures(X, p):
        maps each example into its polynomial features where
        X_poly(i, :) = [X(i) X(i).^2 X(i).^3 ...  X(i).^p];
     """
-    X_poly = np.zeros((X.size, p))
+    X_poly = np.zeros((X.shape[0], p))
     
-    for j in range(p):
-       X_poly[:, j] = X[:, 1]  ^ j
-    
+    for j in range(1, p + 1):
+        X_poly[:, j - 1] = X[:, 0]  ** j
+        #print("X_poly[:, {}]".format(j - 1), X_poly[:, j - 1])
     
     return X_poly

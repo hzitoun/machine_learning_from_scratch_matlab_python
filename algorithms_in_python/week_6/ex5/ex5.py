@@ -16,6 +16,14 @@
 #"""
 
 from linearRegCostFunction import linearRegCostFunction
+from trainLinearReg import trainLinearReg
+from learningCurve import learningCurve
+from polyFeatures import polyFeatures
+from featureNormalize import featureNormalize
+from plotFit import plotFit
+from validationCurve import validationCurve
+from r2_score import r2_score
+from polynomialDegreeCurve import polynomialDegreeCurve
 
 import scipy.optimize as op
 import matplotlib.pyplot as plt
@@ -33,17 +41,17 @@ def pause():
 # Load Training Data
 print('Loading and Visualizing Data ...\n')
 
-X = np.loadtxt('train_features.csv', delimiter =",")
-y = np.loadtxt('train_labels.csv', delimiter =",")
-y = y.reshape(len(y), 1)
+loadInMatrix = lambda fileName, columns_number : np.loadtxt(fileName, delimiter =",").reshape(-1, columns_number) 
 
-Xval = np.loadtxt('cross_validation_features.csv', delimiter =",")
-yval = np.loadtxt('cross_validation_labels.csv', delimiter =",")
-yval = yval.reshape(len(yval), 1)
+X = loadInMatrix('train_features.csv', 1) 
+y = loadInMatrix('train_labels.csv', 1) 
 
-Xtest = np.loadtxt('test_features.csv', delimiter =",")
-ytest = np.loadtxt('test_labels.csv', delimiter =",")
-ytest = ytest.reshape(len(ytest), 1)
+Xval = loadInMatrix('cross_validation_features.csv', 1)  
+yval = loadInMatrix('cross_validation_labels.csv', 1)  
+
+Xtest = loadInMatrix('test_features.csv', 1)  
+ytest = loadInMatrix('test_labels.csv', 1)  
+
 
 # m = Number of examples
 m = X.shape[0]
@@ -89,7 +97,7 @@ print('Gradient at theta = [1 ; 1]:  [{}; {}] \n(this value should be about [-15
 print('Program paused. Press enter to continue.\n')
 pause()
 
-"""
+
 ## =========== Part 4: Train Linear Regression =============
 #  Once you have implemented the cost and gradient correctly, the
 #  trainLinearReg function will use your cost function to train 
@@ -100,19 +108,20 @@ pause()
 #
 
 #  Train linear regression with lambda = 0
-lambda = 0;
-[theta] = trainLinearReg([ones(m, 1) X], y, lambda);
+reg_lambda = 0
+new_input = np.c_[np.ones((m, 1)), X]
+theta = trainLinearReg(new_input, y, reg_lambda)
 
 #  Plot fit over the data
-plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
-xlabel('Change in water level (x)');
-ylabel('Water flowing out of the dam (y)');
-hold on;
-plot(X, [ones(m, 1) X]*theta, '--', 'LineWidth', 2)
-hold off;
+p = new_input.dot(theta)
+plt.plot(X, p, color='blue')
+plt.draw()
+plt.show(block=False)
 
-print('Program paused. Press enter to continue.\n');
-pause;
+print('Program paused. Press enter to continue.\n')
+pause()
+
+
 
 
 ## =========== Part 5: Learning Curve for Linear Regression =============
@@ -122,56 +131,60 @@ pause;
 #                 see a graph with "high bias" -- Figure 3 in ex5.pdf 
 #
 
-lambda = 0;
-[error_train, error_val] = ...
-    learningCurve([ones(m, 1) X], y, ...
-                  [ones(size(Xval, 1), 1) Xval], yval, ...
-                  lambda);
+reg_lambda = 0
+new__training_input = np.c_[np.ones((m, 1)), X]
+new__validation_input = np.c_[np.ones((Xval.shape[0], 1)), Xval]
 
-plot(1:m, error_train, 1:m, error_val);
-title('Learning curve for linear regression')
-legend('Train', 'Cross Validation')
-xlabel('Number of training examples')
-ylabel('Error')
-axis([0 13 0 150])
+error_train, error_val = learningCurve(new__training_input, y, new__validation_input, yval, reg_lambda)
+
+plt.figure(2) #new window
+train_plot, = plt.plot(np.arange(1, m), error_train[1:m], linestyle='solid', color='blue',label="Train")
+val_plot, = plt.plot(np.arange(1, m), error_val[1:m], linestyle='solid', color='red', label='Cross Validation')
+plt.title('Learning curve for linear regression')
+plt.xlabel('Number of training examples')
+plt.ylabel('Error')
+plt.legend(handles=[train_plot, val_plot])
+plt.axis([0, 13, 0, 150])
+plt.draw()
+plt.show(block = False)
 
 print('# Training Examples\tTrain Error\tCross Validation Error\n');
-for i = 1:m
-    print('  \t#d\t\t#f\t#f\n', i, error_train(i), error_val(i));
-end
+for i in range(m):
+    print('  \t{}\t\t{}\t{}\n'.format(i, error_train[i], error_val[i]))
 
-print('Program paused. Press enter to continue.\n');
-pause;
+print('Program paused. Press enter to continue.\n')
+pause()
+
+
 
 ## =========== Part 6: Feature Mapping for Polynomial Regression =============
 #  One solution to this is to use polynomial regression. You should now
 #  complete polyFeatures to map each example into its powers
 #
 
-p = 8;
+p = 6
 
-# Map X onto Polynomial Features and Normalize
-X_poly = polyFeatures(X, p);
-[X_poly, mu, sigma] = featureNormalize(X_poly);  # Normalize
-X_poly = [ones(m, 1), X_poly];                   # Add Ones
+# Map X onto Polynomial Features (creating new features) and Normalize
+X_poly = polyFeatures(X, p)
+X_poly, mu, sigma = featureNormalize(X_poly)  # Normalize
+X_poly = np.c_[np.ones((m, 1)), X_poly]                 # Add Ones
 
 # Map X_poly_test and normalize (using mu and sigma)
-X_poly_test = polyFeatures(Xtest, p);
-X_poly_test = bsxfun(@minus, X_poly_test, mu);
-X_poly_test = bsxfun(@rdivide, X_poly_test, sigma);
-X_poly_test = [ones(size(X_poly_test, 1), 1), X_poly_test];         # Add Ones
+X_poly_test = polyFeatures(Xtest, p)
+X_poly_test = X_poly_test - mu
+X_poly_test = X_poly_test / sigma
+X_poly_test = np.c_[np.ones((X_poly_test.shape[0], 1)), X_poly_test]         # Add Ones
 
 # Map X_poly_val and normalize (using mu and sigma)
-X_poly_val = polyFeatures(Xval, p);
-X_poly_val = bsxfun(@minus, X_poly_val, mu);
-X_poly_val = bsxfun(@rdivide, X_poly_val, sigma);
-X_poly_val = [ones(size(X_poly_val, 1), 1), X_poly_val];           # Add Ones
+X_poly_val = polyFeatures(Xval, p)
+X_poly_val = X_poly_val - mu
+X_poly_val = X_poly_val / sigma
+X_poly_val = np.c_[np.ones((X_poly_val.shape[0], 1)), X_poly_val]          # Add Ones
 
-print('Normalized Training Example 1:\n');
-print('  #f  \n', X_poly(1, :));
-
-print('\nProgram paused. Press enter to continue.\n');
-pause;
+print('Normalized Training Example 1:\n')
+print(X_poly[0, :], '\n')
+print('\nProgram paused. Press enter to continue.\n')
+pause()
 
 
 
@@ -182,36 +195,61 @@ pause;
 #  lambda to see how the fit and learning curve change.
 #
 
-lambda = 0;
-[theta] = trainLinearReg(X_poly, y, lambda);
+reg_lambda = 3
+theta = trainLinearReg(X_poly, y, reg_lambda)
 
 # Plot training data and fit
-figure(1);
-plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
-plotFit(min(X), max(X), mu, sigma, theta, p);
-xlabel('Change in water level (x)');
-ylabel('Water flowing out of the dam (y)');
-title (sprintf('Polynomial Regression Fit (lambda = #f)', lambda));
+plt.figure(3) #new window
+training_data_plot, = plt.plot(X, y, color='red', marker='+', linestyle="None", markersize=30, label="Training data")  
+fit_plot = plotFit(np.min(X), np.max(X), mu, sigma, theta, p, label="Learned function")
+plt.xlabel('Change in water level (x)')
+plt.ylabel('Water flowing out of the dam (y)')
+plt.title('Polynomial Regression Fit (lambda = {})'.format(reg_lambda))
+plt.legend(handles=[training_data_plot, fit_plot])
+plt.axis([-80, 80, -60, 40])
+plt.draw()
+plt.show(block=False)
+pause()
 
-figure(2);
-[error_train, error_val] = ...
-    learningCurve(X_poly, y, X_poly_val, yval, lambda);
-plot(1:m, error_train, 1:m, error_val);
 
-title(sprintf('Polynomial Regression Learning Curve (lambda = #f)', lambda));
-xlabel('Number of training examples')
-ylabel('Error')
-axis([0 13 0 100])
-legend('Train', 'Cross Validation')
+plt.figure(4) #new window
+error_train, error_val = learningCurve(X_poly, y, X_poly_val, yval, reg_lambda)
+train_plot, = plt.plot(np.arange(1, m), error_train[1:m], linestyle='solid', color='blue',label="Train")
+val_plot, = plt.plot(np.arange(1, m), error_val[1:m], linestyle='solid', color='red', label='Cross Validation')
+plt.title('Polynomial Regression Learning Curve (lambda = {})'.format(reg_lambda))
+plt.xlabel('Number of training examples')
+plt.ylabel('Error')
+plt.axis([0, 13, 0, 100])
+plt.legend(handles=[train_plot, val_plot])
+plt.draw()
+plt.show(block=False)
+print('Polynomial Regression (lambda = {})\n\n'.format(reg_lambda))
+print('# Training Examples\tTrain Error\tCross Validation Error\n')
+for i in range(m):
+    print('  \t{}\t\t{}\t{}\n'.format(i, error_train[i], error_val[i]))
 
-print('Polynomial Regression (lambda = #f)\n\n', lambda);
-print('# Training Examples\tTrain Error\tCross Validation Error\n');
-for i = 1:m
-    print('  \t#d\t\t#f\t#f\n', i, error_train(i), error_val(i));
-end
+print('Program paused. Press enter to continue.\n')
+pause()
 
-print('Program paused. Press enter to continue.\n');
-pause;
+
+## =========== New Part :D : plot curves in function of polynomial degree======
+##  use this to select the  "best" polynomial degree value p.
+
+
+plt.figure(5) #new window
+degrees, error_train, error_val = polynomialDegreeCurve(X, y, Xval , yval, reg_lambda)
+train_plot, = plt.plot(degrees, error_train, linestyle='solid', color='blue',label="Train")
+val_plot, = plt.plot(degrees, error_val, linestyle='solid', color='red', label='Cross Validation')
+plt.title('Polynomial Regression Curves (lambda = {})'.format(reg_lambda))
+plt.xlabel('Degree of polynomial d')
+plt.ylabel('Error')
+#plt.axis([0, 13, 0, 100])
+plt.legend(handles=[train_plot, val_plot])
+plt.draw()
+plt.show(block=False)
+print('Program paused. Press enter to continue.\n')
+pause()
+
 
 ## =========== Part 8: Validation for Selecting Lambda =============
 #  You will now implement validationCurve to test various values of 
@@ -219,21 +257,26 @@ pause;
 #  "best" lambda value.
 #
 
-[lambda_vec, error_train, error_val] = ...
-    validationCurve(X_poly, y, X_poly_val, yval);
+plt.figure(6) #new window
+lambda_vec, error_train, error_val = validationCurve(X_poly, y, X_poly_val, yval)
+train_plot, = plt.plot(lambda_vec, error_train, linestyle='solid', color='blue',label="Train")
+val_plot, = plt.plot(lambda_vec, error_val, linestyle='solid', color='red', label='Cross Validation')
+plt.xlabel('lambda')
+plt.ylabel('Error')
+plt.legend(handles=[train_plot, val_plot])
+plt.axis([0, 10, 0, 25])
+plt.draw()
+plt.show(block=False)
 
-close all;
-plot(lambda_vec, error_train, lambda_vec, error_val);
-legend('Train', 'Cross Validation');
-xlabel('lambda');
-ylabel('Error');
 
-print('lambda\t\tTrain Error\tValidation Error\n');
-for i = 1:length(lambda_vec)
-	print(' #f\t#f\t#f\n', ...
-            lambda_vec(i), error_train(i), error_val(i));
-end
+print('lambda\t\tTrain Error\tValidation Error\n')
+for i in range(len(lambda_vec)):
+	print(' {}\t{}\t{}\n'.format(lambda_vec[i], error_train[i], error_val[i]))
+    
+prediction = X_poly.dot(theta).reshape(-1, 1)
+print('\nTraining Set Accuracy: ', r2_score(y, prediction) * 100, '%\n')    
 
-print('Program paused. Press enter to continue.\n');
-pause;
-"""
+
+print('Program paused. Press enter to continue.\n')
+pause()
+
