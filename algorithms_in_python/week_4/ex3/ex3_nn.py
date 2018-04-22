@@ -1,19 +1,4 @@
-""" Machine Learning Online Class - Exercise 3 | Part 2: Neural Networks
-
-  Instructions
-  ------------
- 
-  This file contains code that helps you get started on the
-  linear exercise. You will need to complete the following functions 
-  in this exericse:
-
-     lrCostFunction.m (logistic regression cost function)
-     oneVsAll.m
-     predictOneVsAll.m
-     predict.m
-
-  For this exercise, you will not need to change any code in this file,
-  or any other files other than those mentioned above.
+"""# Machine Learning Online Class - Exercise 3 | Part 2: Neural Networks
 """
 
 from predict import predict
@@ -30,10 +15,10 @@ hidden_layer_size = 25    # 25 hidden units
 num_labels = 10          # 10 labels, from 0 to 9  
                          
 
-# =========== Part 1: Loading and Visualizing Data =============
-#  We start the exercise by first loading and visualizing the dataset. 
-#  You will be working with a dataset that contains handwritten digits.
-#
+"""## Part 1: Loading and Visualizing Data =============
+  We start the exercise by first loading and visualizing the dataset. 
+  You will be working with a dataset that contains handwritten digits.
+"""
 
 # Load Training Data
 print('Loading and Visualizing Data ...\n')
@@ -56,9 +41,9 @@ plt.show()
 print('Program paused. Press enter to continue.\n')
 pause()
 
-# ================ Part 2: Loading Pameters ================
-# In this part of the exercise, we load some pre-initialized 
-# neural network parameters.
+"""## Part 2: Loading Pameters ================
+ In this part of the exercise, we load some pre-initialized 
+ neural network parameters."""
 
 print('\nLoading Saved Neural Network Parameters ...\n')
 
@@ -67,11 +52,11 @@ print('\nLoading Saved Neural Network Parameters ...\n')
 Theta1 = np.loadtxt('Theta1.csv', delimiter =",")
 Theta2 = np.loadtxt('Theta2.csv', delimiter =",") 
 
-# ================= Part 3: Implement Predict =================
-#  After training the neural network, we would like to use it to predict
-#  the labels. You will now implement the "predict" function to use the
-#  neural network to predict the labels of the training set. This lets
-#  you compute the training set accuracy.
+"""## Part 3: Implement Predict =================
+  After training the neural network, we would like to use it to predict
+  the labels. You will now implement the "predict" function to use the
+  neural network to predict the labels of the training set. This lets
+  you compute the training set accuracy."""
 
 p = predict(Theta1, Theta2, X)
 y = y.reshape((m))

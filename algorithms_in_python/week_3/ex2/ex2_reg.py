@@ -1,21 +1,5 @@
-""" Machine Learning Online Class - Exercise 2: Logistic Regression
-#
-#  Instructions
-#  ------------
-#
-#  This file contains code that helps you get started on the second part
-#  of the exercise which covers regularization with logistic regression.
-#
-#  You will need to complete the following functions in this exericse:
-#
-#     sigmoid.py
-#     costFunction.py
-#     predict.py
-#     costFunctionReg.py
-#
-#  For this exercise, you will not need to change any code in this file,
-#  or any other files other than those mentioned above.
-#"""
+""" #Machine Learning Online Class - Exercise 2: Logistic Regression
+"""
 
 from costFunction import costFunction
 from mapFeature import mapFeature
@@ -31,9 +15,9 @@ import numpy as np
 def pause():
     input("")
 
-## Load Data
-#  The first two columns contains the X values and the third column
-#  contains the label (y).
+"""## Load Data
+  The first two columns contains the X values and the third column
+  contains the label (y)."""
 
 data = np.loadtxt('ex2data2.txt', delimiter =",")
 
@@ -54,14 +38,14 @@ plt.show(block=False)
 print("\nProgram paused. Press enter to continue.\n")
 pause()
 
-## =========== Part 1: Regularized Logistic Regression ============
-#  In this part, you are given a dataset with data points that are not
-#  linearly separable. However, you would still like to use logistic
-#  regression to classify the data points.
-#
-#  To do so, you introduce more features to use -- in particular, you add
-#  polynomial features to our data matrix (similar to polynomial
-#  regression).
+"""## Part 1: Regularized Logistic Regression ============
+  In this part, you are given a dataset with data points that are not
+  linearly separable. However, you would still like to use logistic
+  regression to classify the data points.
+
+  To do so, you introduce more features to use -- in particular, you add
+  polynomial features to our data matrix (similar to polynomial
+  regression)."""
 #
 
 # Add Polynomial Features
@@ -106,16 +90,16 @@ print(' 0.3460\n 0.1614\n 0.1948\n 0.2269\n 0.0922\n')
 print('\nProgram paused. Press enter to continue.\n')
 pause()
 
-## ============= Part 2: Regularization and Accuracies =============
-#  Optional Exercise:
-#  In this part, you will get to try different values of lambda and
-#  see how regularization affects the decision coundart
-#
-#  Try the following values of lambda (0, 1, 10, 100).
-#
-#  How does the decision boundary change when you vary lambda? How does
-#  the training set accuracy vary?
-#
+"""## Part 2: Regularization and Accuracies =============
+  Optional Exercise:
+  In this part, you will get to try different values of lambda and
+  see how regularization affects the decision coundart
+
+  Try the following values of lambda (0, 1, 10, 100).
+
+  How does the decision boundary change when you vary lambda? How does
+  the training set accuracy vary?
+"""
 
 # Initialize fitting parameters
 initial_theta = np.zeros((X.shape[1], 1))

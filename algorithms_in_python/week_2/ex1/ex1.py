@@ -1,24 +1,4 @@
-""" Machine Learning Online Class - Exercise 1: Linear Regression
-
-  Instructions
-  ------------
-
-  This file contains code that helps you get started on the
-  linear exercise. You will need to complete the following functions
-  in this exericse:
-
-     warmUpExercise.py
-     plotData.py
-     gradientDescent.py
-     computeCost.py
-     gradientDescentMulti.py
-     computeCostMulti.py
-     featureNormalize.py
-     normalEqn.py
-
-  For this exercise, you will not need to change any code in this file,
-  or any other files other than those mentioned above.
-
+""" #Machine Learning Online Class - Exercise 1: Linear Regression
 """
 
 import numpy as np
@@ -33,8 +13,7 @@ import matplotlib.pyplot as plt
 def pause():
       input("Press the <ENTER> key to continue...")
 
-#♣ ==================== Part 1: Basic Function ====================
-
+"""## Part 1: Basic Function """
 print("Running warmUpExercise ... \n")
 print("5x5 Identity Matrix: \n")
 print(warmUpExercise())
@@ -42,7 +21,7 @@ print("Program paused. Press enter to continue.\n")
 pause()
 
 
-#======================= Part 2: Plotting =======================
+"""## ======================= Part 2: Plotting """
 print("Plotting Data ...\n")
 data = np.loadtxt('ex1data1.txt', delimiter =",")
 
@@ -61,7 +40,7 @@ plt.show(block=False)
 print("Program paused. Press enter to continue.\n")
 pause()
 
-## =================== Part 3: Cost and Gradient descent ===================
+"""## Part 3: Cost and Gradient descent """
 
 X = np.c_[np.ones((m, 1)), X] # Add a column of ones to x
 theta = np.zeros((2, 1)) #initialize fitting parameters
@@ -109,10 +88,8 @@ print("Program paused. Press enter to continue.\n")
 pause()
 
 
-# ============= Part 4: Visualizing J(theta_0, theta_1) =============
-
-#======Visualizing The drop of cost function (Convergence of gradient descent with an appropriate learning rate)
-#=========
+"""## Part 4: Visualizing J(theta_0, theta_1) : Visualizing The drop of cost function (Convergence of gradient descent with an appropriate learning rate)
+"""
 
 plt.figure(2) #new window
 plt.plot(np.arange(0,iterations), J_history, linestyle='solid', color='red')

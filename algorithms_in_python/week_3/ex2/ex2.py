@@ -1,22 +1,5 @@
 """
- Machine Learning Online Class - Exercise 2: Logistic Regression
-
-  Instructions
-  ------------
- 
-  This file contains code that helps you get started on the logistic
-  regression exercise. You will need to complete the following functions 
-  in this exericse:
-
-     sigmoid.py
-     costFunction.py
-     predict.py
-     costFunctionReg.py
-
-  For this exercise, you will not need to change any code in this file,
-  or any other files other than those mentioned above.
-
-
+# Machine Learning Online Class - Exercise 2: Logistic Regression
 """
 
 from gradient import gradient
@@ -47,9 +30,9 @@ m = y.size #umber of training examples
 y = y.reshape((m,1))
 
 
-#==================== Part 1: Plotting ====================
-#We start the exercise by first plotting the data to understand the 
-#  the problem we are working with.
+"""## Part 1: Plotting ====================
+We start the exercise by first plotting the data to understand the 
+  the problem we are working with."""
 
 #scatter plot
 print("Plotting data with + indicating (y = 1) examples and o indicating (y = 0) examples.")
@@ -65,7 +48,7 @@ print("\nProgram paused. Press enter to continue.\n")
 pause()
 
 
-#============ Part 2: Compute Cost and Gradient ============
+"""## Part 2: Compute Cost and Gradient """
 
 #  Setup the data matrix appropriately, and add ones for the intercept term
 m, n = X.shape
@@ -98,7 +81,7 @@ print("Expected gradients (approx):\n 0.043\n 2.566\n 2.647\n")
 print("\nProgram paused. Press enter to continue.\n")
 pause()
 
-# ============= Part 3: Optimizing using  scipy.optimize (equivalent to fminunc in matlab) =============
+"""## Part 3: Optimizing using  scipy.optimize (equivalent to fminunc in matlab)"""
 
 Result = op.minimize(fun = costFunction, x0 = initial_theta, args = (X, y), method = 'TNC', jac = gradient)
 optimal_theta = Result.x
@@ -116,17 +99,17 @@ plt.show(block=False)
 print("\nProgram paused. Press enter to continue.\n")
 pause()
 
-#============== Part 4: Predict and Accuracies ==============
-#  After learning the parameters, you'll like to use it to predict the outcomes
-#  on unseen data. In this part, you will use the logistic regression model
-#  to predict the probability that a student with score 45 on exam 1 and 
-#  score 85 on exam 2 will be admitted.
+"""## Part 4: Predict and Accuracies 
+  After learning the parameters, you'll like to use it to predict the outcomes
+  on unseen data. In this part, you will use the logistic regression model
+  to predict the probability that a student with score 45 on exam 1 and 
+  score 85 on exam 2 will be admitted.
 
-#  Furthermore, you will compute the training and test set accuracies of 
-#  our model.
+  Furthermore, you will compute the training and test set accuracies of 
+  our model.
 
-#  Predict probability for a student with score 45 on exam 1 
-#  and score 85 on exam 2 
+  Predict probability for a student with score 45 on exam 1 
+  and score 85 on exam 2 """
 
 theta  = optimal_theta
 
