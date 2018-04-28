@@ -243,11 +243,8 @@ class SVMModel:
             else:
                 passes = 0
 
-            print('.', end="")
             dots = dots + 1
-            if dots > 78:
-                dots = 0
-                print('\n')
+
         print(' Done! \n\n')
 
         # Save the model

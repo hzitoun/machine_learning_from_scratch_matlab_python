@@ -5,7 +5,7 @@ from plotData import plotData
 from svmModel import SVMModel
 from visualizeBoundaryLinear import visualizeBoundaryLinear
 from visualizeBoundary import visualizeBoundary
-from dataset3Params import dataset3Params
+from dataset3Params import dataset3_params
 
 import scipy.io as sio
 import matplotlib.pyplot as plt
@@ -150,7 +150,7 @@ Xval = mat_contents['Xval']
 yval = mat_contents['yval'].flatten()
 
 # Try different SVM Parameters here
-C, sigma = dataset3Params(X, y, Xval, yval)
+C, sigma = dataset3_params(X, y, Xval, yval)
 
 # Train the SVM
 model = SVMModel()

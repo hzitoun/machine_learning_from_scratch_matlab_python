@@ -1,9 +1,8 @@
 import numpy as np
-
 from svmModel import SVMModel
 
 
-def dataset3Params(X, y, Xval, yval):
+def dataset3_params(x, y, xval, yval):
     """
     Returns your choice of C and sigma for Part 3 of the exercise
     where you select the optimal (C, sigma) learning parameters to use for SVM
@@ -22,13 +21,13 @@ def dataset3Params(X, y, Xval, yval):
 
     for current_c in values:
         for current_sigma in values:
-            # ALWAYS train the model on training sets (X and y)
 
+            # ALWAYS train the model on training sets (X and y)
             model = SVMModel()
-            model.train(X, y, current_c, kernel_type='rbf', tol=1e-3, max_passes=5, sigma=sigma)
+            model.train(x, y, current_c, kernel_type='rbf', tol=1e-3, max_passes=5, sigma=sigma)
 
             # AND evaluate it on cross validation set
-            predictions = model.predict(Xval)
+            predictions = model.predict(xval)
             error = np.mean((predictions == yval).astype(int))
 
             if error < max_error:
