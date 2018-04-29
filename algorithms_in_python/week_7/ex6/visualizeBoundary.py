@@ -1,26 +1,13 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-def visualizeBoundary(X, y, model):
-    """VISUALIZEBOUNDARY plots a non-linear decision boundary learned by the SVM
-       VISUALIZEBOUNDARYLINEAR(X, y, model) plots a non-linear decision 
-       boundary learned by the SVM and overlays the data on it
+def visualizeBoundary(X, y, model, h=0.02, pad=0.25):
+    """ Plots a decision boundary learned by the SVM
     """
-    # Plot the training data on top of the boundary
-    # plotData(X, y)
-    #  Make classification predictions over a grid of values
-    # Here is the grid range
-    u = np.linspace(min(X[:, 0]), max(X[:, 0]), num=100).T
-    v = np.linspace(min(X[:, 1]), max(X[:, 1]), num=100).T
-    X1, X2 = np.meshgrid(u, v)
-
-    m, n = X1.shape
-    vals = np.zeros(X1.shape)
-
-    for i in range(n):
-        this_X = np.c_[X1[:, i], X2[:, i]]
-        vals[:, i] = model.predict(this_X).flatten()
-
-    # Plot the SVM boundary
-    plt.contour(X1, X2, vals)
+    x_min, x_max = X[:, 0].min() - pad, X[:, 0].max() + pad
+    y_min, y_max = X[:, 1].min() - pad, X[:, 1].max() + pad
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+    z = model.predict(np.c_[xx.ravel(), yy.ravel()])
+    z = z.reshape(xx.shape)
+    plt.contourf(xx, yy, z, cmap=plt.cm.Paired, alpha=0.2)

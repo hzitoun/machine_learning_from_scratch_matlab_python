@@ -24,13 +24,13 @@ def dataset3_params(x, y, xval, yval):
 
             # ALWAYS train the model on training sets (X and y)
             model = SVMModel()
-            model.train(x, y, current_c, kernel_type='rbf', tol=1e-3, max_passes=5, sigma=sigma)
+            model.train(x, y, current_c, kernel_type='rbf', tol=1e-3, max_passes=5, sigma=current_sigma)
 
             # AND evaluate it on cross validation set
             predictions = model.predict(xval)
-            error = np.mean((predictions == yval).astype(int))
+            error = np.mean((predictions != yval).astype(float))
 
-            if error < max_error:
+            if error <= max_error:
                 max_error = error
                 c = current_c
                 sigma = current_sigma

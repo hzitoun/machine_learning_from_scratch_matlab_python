@@ -3,7 +3,6 @@
 
 from plotData import plotData
 from svmModel import SVMModel
-from visualizeBoundaryLinear import visualizeBoundaryLinear
 from visualizeBoundary import visualizeBoundary
 from dataset3Params import dataset3_params
 
@@ -43,7 +42,7 @@ print('\nTraining Linear SVM ...\n')
 C = 1
 model = SVMModel()
 model.train(X, y, C, kernel_type='lnr', tol=1e-3, max_passes=20)
-visualizeBoundaryLinear(X, y, model)
+visualizeBoundary(X, y, model)
 plt.draw()
 plt.show(block=False)
 
@@ -158,7 +157,7 @@ model.train(X, y, C, kernel_type='rbf', tol=1e-3, max_passes=5, sigma=sigma)
 
 print("best params", C, sigma)
 
-visualizeBoundary(X, y, model)
+visualizeBoundary(Xval, yval, model)
 plt.draw()
 plt.show(block=False)
 
