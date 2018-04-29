@@ -68,13 +68,13 @@ class SVMModel:
         elif 'rbf' == self.kernel_type:
             # Vectorized RBF Kernel
             # This is equivalent to computing the kernel on every pair of examples
-            X1 = np.sum(x ** 2, 1).reshape(-1, 1)
-            X2 = np.sum(self.X ** 2, 1).reshape(-1, 1).T
-            K = X1 + X2 - 2 * x.dot(self.X.T)
-            K = self.kernel_function(1, 0, self.sigma) ** K
-            K = self.y.T * K
-            K = self.alphas.T * K
-            p = np.sum(K, 1)
+            x1 = np.sum(x ** 2, 1).reshape(-1, 1)
+            x2 = np.sum(self.X ** 2, 1).reshape(-1, 1).T
+            k = x1 + x2 - 2 * x.dot(self.X.T)
+            k = self.kernel_function(1, 0, self.sigma) ** k
+            k = self.y.T * k
+            k = self.alphas.T * k
+            p = np.sum(k, 1)
         else:
             # Other Non-linear kernel
             for i in range(m):
@@ -110,8 +110,11 @@ class SVMModel:
            :param sigma
            :return the trained mode
         """
+        print('\nTraining preparation ')
         if kernel_type not in self.defined_kernels:
             raise ValueError("SVM Init: kernelFunction must be one of {}".format(self.defined_kernels))
+        if kernel_type == 'rbf' and not sigma:
+            raise ValueError("SVM Init: RBF kernel requires sigma")
         self.X = x
         self.y = y
         self.C = c
@@ -129,7 +132,7 @@ class SVMModel:
         # Variables
         alphas = np.zeros(m)
         b = 0
-        E = np.zeros(m)
+        e = np.zeros(m)
         passes = 0
 
         # Pre-compute the Kernel Matrix since our dataset is small
@@ -141,24 +144,24 @@ class SVMModel:
         if 'lnr' == self.kernel_type:
             # Vectorized computation for the Linear Kernel
             # This is equivalent to computing the kernel on every pair of examples
-            K = x.dot(x.T)
+            k = x.dot(x.T)
         elif 'rbf' == self.kernel_type:
             # Vectorized RBF Kernel
             # This is equivalent to computing the kernel on every pair of examples
-            X2 = np.sum(x ** 2, 1).reshape(-1, 1).T
-            K = X2 + X2.T - 2 * x.dot(x.T)
-            K = self.kernel_function(1, 0, self.sigma) ** K
+            x2 = np.sum(x ** 2, 1).reshape(-1, 1).T
+            k = x2 + x2.T - 2 * x.dot(x.T)
+            k = self.kernel_function(1, 0, self.sigma) ** k
         else:
             # Pre-compute the Kernel Matrix
             # The following can be slow due to the lack of vectorization
-            K = np.zeros(m)
+            k = np.zeros((m, m))
             for i in range(m):
                 for j in range(m):
-                    K[i, j] = self.kernel_function(x[i, :].T, x[j, :].T)
-                    K[j, i] = K[i, j]  # the matrix is symmetric
+                    k[i, j] = self.kernel_function(x[i, :].T, x[j, :].T)
+                    k[j, i] = k[i, j]  # the matrix is symmetric
 
-        #    Train
-        print('\nTraining ...')
+        # Train
+        print('\nTraining ')
         dots = 12
         while passes < max_passes:
 
@@ -167,10 +170,10 @@ class SVMModel:
 
                 #  Calculate Ei = f(x(i)) - y(i) using (2).
                 # E[i[ = b + sum (X(i, :) * (repmat(alphas.*Y,1,n).*X)') - Y(i);
-                E[i] = b + np.sum(alphas * y * K[:, i]) - y[i]
+                e[i] = b + np.sum(alphas * y * k[:, i]) - y[i]
 
-                cond1 = y[i] * E[i] < -tol and alphas[i] < c
-                cond2 = y[i] * E[i] > tol and alphas[i] > 0
+                cond1 = y[i] * e[i] < -tol and alphas[i] < c
+                cond2 = y[i] * e[i] > tol and alphas[i] > 0
 
                 if cond1 or cond2:
 
@@ -181,7 +184,7 @@ class SVMModel:
                         j = ceil((m - 1) * random.uniform(0, 1))
 
                     # Calculate Ej = f(x(j)) - y(j) using (2).
-                    E[j] = b + np.sum(alphas * y * K[:, j]) - y[j]
+                    e[j] = b + np.sum(alphas * y * k[:, j]) - y[j]
 
                     # Save old alphas
                     alpha_i_old = alphas[i]
@@ -200,13 +203,13 @@ class SVMModel:
                         continue
 
                     # Compute eta by (14).
-                    eta = 2 * K[i, j] - K[i, i] - K[j, j]
+                    eta = 2 * k[i, j] - k[i, i] - k[j, j]
                     if eta >= 0:
                         # continue to next i.
                         continue
 
                     # Compute and clip new value for alpha j using (12) and (15).
-                    alphas[j] = alphas[j] - (y[j] * (E[i] - E[j])) / eta
+                    alphas[j] = alphas[j] - (y[j] * (e[i] - e[j])) / eta
 
                     # Clip
                     alphas[j] = min(H, alphas[j])
@@ -223,10 +226,10 @@ class SVMModel:
                     alphas[i] = alphas[i] + y[i] * y[j] * (alpha_j_old - alphas[j])
 
                     # Compute b1 and b2 using (17) and (18) respectively.
-                    b1 = b - E[i] - y[i] * (alphas[i] - alpha_i_old) * K[i, j].T - y[j] * (alphas[j] - alpha_j_old) \
-                         * K[i, j].T
-                    b2 = b - E[j] - y[i] * (alphas[i] - alpha_i_old) * K[i, j].T - y[j] * (alphas[j] - alpha_j_old) \
-                         * K[j, j].T
+                    b1 = b - e[i] - y[i] * (alphas[i] - alpha_i_old) * k[i, j].T - y[j] * (alphas[j] - alpha_j_old) \
+                         * k[i, j].T
+                    b2 = b - e[j] - y[i] * (alphas[i] - alpha_i_old) * k[i, j].T - y[j] * (alphas[j] - alpha_j_old) \
+                         * k[j, j].T
 
                     # Compute b by (19).
                     if 0 < alphas[i] < c:
@@ -243,7 +246,11 @@ class SVMModel:
             else:
                 passes = 0
 
+            print('.', end="")
             dots = dots + 1
+            if dots > 78:
+                dots = 0
+                print('\n')
 
         print(' Done! \n\n')
 

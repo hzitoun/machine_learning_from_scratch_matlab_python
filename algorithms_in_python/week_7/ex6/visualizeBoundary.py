@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def visualizeBoundary(X, y, model, varargin=None):
+def visualizeBoundary(X, y, model):
     """VISUALIZEBOUNDARY plots a non-linear decision boundary learned by the SVM
        VISUALIZEBOUNDARYLINEAR(X, y, model) plots a non-linear decision 
        boundary learned by the SVM and overlays the data on it
