@@ -5,6 +5,7 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io as sio
+
 from computeCentroids import compute_centroids
 from findClosestCentroids import find_closest_centroids
 from kMeansInitCentroids import kmeans_init_centroids
