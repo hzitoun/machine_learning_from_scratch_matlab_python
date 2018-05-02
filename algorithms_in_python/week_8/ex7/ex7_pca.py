@@ -236,6 +236,7 @@ pause()
 Use PCA to project this cloud to 2D for visualization
 """
 
+
 # Subtract the mean to use PCA
 X_norm, mu, sigma = featureNormalize(X)
 
