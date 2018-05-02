@@ -7,4 +7,4 @@ def predict(theta, X):
     p = PREDICT(theta, X) computes the predictions for X using a 
     threshold at 0.5 (i.e., if sigmoid(theta'*x) >= 0.5, predict 1) """ 
     
-    return sigmoid(np.dot(X, theta)) >=0.5  
+    return sigmoid(np.dot(X, theta)) >=0.5 

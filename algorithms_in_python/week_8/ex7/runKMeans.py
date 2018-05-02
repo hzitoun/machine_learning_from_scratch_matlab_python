@@ -32,7 +32,7 @@ def run_kmeans(X, initial_centroids, max_iters, plot_progress=False):
     for i in range(max_iters):
 
         # Output progress
-        print('K-Means iteration {}/{}...'.format(i, max_iters))
+        print('K-Means iteration {}/{}...'.format(i + 1, max_iters))
 
         # For each example in X, assign it to the closest centroid
         idx = find_closest_centroids(X, centroids)

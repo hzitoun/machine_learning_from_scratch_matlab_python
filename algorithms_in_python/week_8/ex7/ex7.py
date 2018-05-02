@@ -72,7 +72,7 @@ pause()
 print('\nRunning K-Means clustering on example dataset.\n\n')
 
 # Settings for running K-Means
-K = 3
+K = 2
 max_iters = 10
 
 # For consistency, here we set centroids to specific values
@@ -80,12 +80,12 @@ max_iters = 10
 # settings them to be random examples (as can be seen in
 # kMeansInitCentroids).
 
-initial_centroids = np.array([[3, 3], [6, 2], [8, 5]])
+initial_centroids = np.array([[3, 3], [6, 2]])
 
 # Run K-Means algorithm. The 'true' at the end tells our function to plot
 # the progress of K-Means
 
-# centroids, idx = run_kmeans(X, initial_centroids, max_iters, True)
+centroids, idx = run_kmeans(X, initial_centroids, max_iters, True)
 print('\nK-Means Done.\n\n')
 
 print('Program paused. Press enter to continue.\n')

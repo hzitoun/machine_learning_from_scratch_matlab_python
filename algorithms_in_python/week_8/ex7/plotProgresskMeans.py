@@ -26,7 +26,7 @@ def plot_progress_kmeans(X, centroids, previous, idx, K, i):
 
     arrstr = np.char.mod('%d', np.arange(K))
     c = itertools.cycle("".join(arrstr))
-    rgb = np.eye(K)
+    rgb = np.eye(K, 3)
 
     for j in range(count):
         x = np.r_[centroids[j, 0], previous[j, 0]]
