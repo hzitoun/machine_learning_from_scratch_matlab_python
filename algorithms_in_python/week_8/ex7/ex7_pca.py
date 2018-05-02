@@ -232,7 +232,7 @@ print('Program paused. Press enter to continue.\n')
 pause()
 
 """
-Part 8(b): Optional (ungraded) Exercise: PCA for Visualization
+## Part 8(b): Optional (ungraded) Exercise: PCA for Visualization
 Use PCA to project this cloud to 2D for visualization
 """
 
