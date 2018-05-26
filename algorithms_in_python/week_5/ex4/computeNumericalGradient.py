@@ -19,7 +19,7 @@ def computeNumericalGradient(J, theta):
     perturb = np.zeros(theta.shape)
     length = theta.shape[0]
     
-    e = 1e-4;
+    e = 1e-4
     for p in range(length):
         # Set perturbation vector
         perturb[p] = e

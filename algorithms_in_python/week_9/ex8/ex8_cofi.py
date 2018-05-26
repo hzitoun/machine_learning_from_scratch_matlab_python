@@ -234,7 +234,7 @@ sorted_idxs = (-my_predictions.flatten()).argsort()
 print('\nTop recommendations for you:\n')
 for i in range(10):
     j = sorted_idxs[i]
-    print('Predicting rating {} for movie {}'.format(my_predictions[j], movieList[j]))
+    print('Predicting rating {} for movie {}'.format(int(np.round(my_predictions[j])), movieList[j]))
 
 print('\n\nOriginal ratings provided:\n')
 
