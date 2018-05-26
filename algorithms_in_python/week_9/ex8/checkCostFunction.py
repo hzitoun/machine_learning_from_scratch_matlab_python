@@ -41,7 +41,7 @@ def checkCostFunction(reg_lambda=0):
 
     # make sure both grad have the same shape
     grad = grad.reshape(numgrad.shape)
-    print([numgrad, grad])
+    print(np.c_[numgrad.ravel(), grad.ravel()])
     print('The above two columns you get should be very similar. '
           '(Left-Your Numerical Gradient, Right-Analytical Gradient)\n\n')
 
