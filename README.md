@@ -4,60 +4,64 @@ All the work done by me as a part of Coursera's Machine Learning Course + A Vect
 It's an excellent Stanford University Coursera course from the leaders of AI. It is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination. 
 ## Algorithms:
 1.  **Linear regression** with one variable to predict proﬁts for a food truck
-<img align="center" src ="./figures/1_linear_regression.png" />
+<p align="center">
+    <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
+</p>
 
 2.  **Regularized Linear regression** with multiple variables to predict the prices of houses
-<div style="text-align:center"><img src ="./figures/1_linear_regression_3d.png" /></div>
-
+<p align="center">
+    <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
+</p>
+ 
 3.  **Regularized logistic regression** to predict whether microchips from a fabrication plant passes quality assurance (QA)
-<div style="text-align:center">
-    <img src ="./figures/2_logistic_regression.png" />
-</div>
+<p align="center">
+    <img src ="./figures/2_logistic_regression.png" alt="Regularized logistic regression"/>
+</p>
 
 4.  **Multi-class Logistic regression** to recognize handwritten digits 
-<div style="text-align:center">
-    <img src ="./figures/3_one_vs_all_classification.png" />
-</div>
+<p align="center">
+   <img src ="./figures/3_one_vs_all_classification.png" alt="Multi-class Logistic regression" />
+</p>
 
 5.  **Neural Networks** to recognize handwritten digits 
-<div style="text-align:center">
-    <img src ="./figures/4_viz_nn.png" />
-</div>
+<p align="center">
+    <img src ="./figures/4_viz_nn.png" alt="Neural Networks"/>
+</p>
 
 6.  **Metrics To Evaluate Machine Learning Algorithms - Bias v.s. Variance**
-<div style="text-align:center">
-    <img src ="./figures/5_learning_curves.png" />
-</div>
+<p align="center">
+    <img src ="./figures/5_learning_curves.png" alt="learning curves"/>
+</p>
 
 7.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
-<div style="text-align:center">
+<p align="center">
     <img src ="./figures/6_svms.png" />
     <img src ="./figures/6_spam.png" />
-</div>
+</p>
 
 8.  **K-means** clustering algorithm for image compression
-<div style="text-align:center">
-    <img src ="./figures/7_kmeans.png" />
+<p align="center">
+   <img src ="./figures/7_kmeans.png" />
     <img src ="./figures/7_keams_image_compression.png" />
-</div>
+</p>
 
 9.  **Principal component analysis (PCA)** to perform dimensionality reduction
-<div style="text-align:center">
-    <img src ="./figures/8_pca_datasets_before.png" />
-</div>
-<div style="text-align:center">
-     <img src ="./figures/8_pca_faces.png" />
-</div>
+<p align="center">
+ <img src ="./figures/8_pca_datasets_before.png" />
+</p>
+<p align="center">
+   <img src ="./figures/8_pca_faces.png" />
+</p>
  
 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
-<div style="text-align:center">
-     <img src ="./figures/9_anomaly_detection.png" />
-</div>
+<p align="center">
+    <img src ="./figures/9_anomaly_detection.png" />
+</p>
 
 11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
-<div style="text-align:center">
-     <img src ="./figures/9_collaborative_filtering.png" />
-</div>
+<p align="center">
+    <img src ="./figures/9_collaborative_filtering.png" />
+</p>
 
 ## 🐍 Python Implementation
 Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement each assignment in Python using only NumPy, SciPy, and Matplotlib
