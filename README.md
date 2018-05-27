@@ -12,47 +12,49 @@ It's an excellent Stanford University Coursera course from the leaders of AI. It
 3.  **Regularized logistic regression** to predict whether microchips from a fabrication plant passes quality assurance (QA)
 <div style="text-align:center">
     <img src ="./figures/2_logistic_regression.png" />
-    <img src ="./figures/2_logistic_regression_2.png" />
 </div>
 
 4.  **Multi-class Logistic regression** to recognize handwritten digits 
 <div style="text-align:center">
-    <img src ="./figures/3_one_vs_all_classification_data.png" />
     <img src ="./figures/3_one_vs_all_classification.png" />
 </div>
 
 5.  **Neural Networks** to recognize handwritten digits 
 <div style="text-align:center">
-    <img src ="./figures/3_one_vs_all_classification_data.png" />
     <img src ="./figures/4_viz_nn.png" />
 </div>
 
-6.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
+6.  **Metrics To Evaluate Machine Learning Algorithms - Bias v.s. Variance**
+<div style="text-align:center">
+    <img src ="./figures/5_learning_curves.png" />
+</div>
+
+7.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
 <div style="text-align:center">
     <img src ="./figures/6_svms.png" />
     <img src ="./figures/6_spam.png" />
 </div>
 
-7.  **K-means** clustering algorithm for image compression
+8.  **K-means** clustering algorithm for image compression
 <div style="text-align:center">
     <img src ="./figures/7_kmeans.png" />
     <img src ="./figures/7_keams_image_compression.png" />
 </div>
 
-8.  **Principal component analysis (PCA)** to perform dimensionality reduction
+9.  **Principal component analysis (PCA)** to perform dimensionality reduction
 <div style="text-align:center">
     <img src ="./figures/8_pca_datasets_before.png" />
 </div>
 <div style="text-align:center">
-     <img src ="./figures/7_keams_image_compression.png" />
+     <img src ="./figures/8_pca_faces.png" />
 </div>
  
-9.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
+10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
 <div style="text-align:center">
      <img src ="./figures/9_anomaly_detection.png" />
 </div>
 
-10. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
+11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
 <div style="text-align:center">
      <img src ="./figures/9_collaborative_filtering.png" />
 </div>
