@@ -4,7 +4,7 @@ All the work done by me as a part of Coursera's Machine Learning Course + A Vect
 It's an excellent Stanford University Coursera course from the leaders of AI. It is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination. 
 ## Algorithms:
 1.  **Linear regression** with one variable to predict proﬁts for a food truck
-<div style="text-align:center"><img src ="./figures/1_linear_regression.png" /></div>
+<img align="center" src ="./figures/1_linear_regression.png" />
 
 2.  **Regularized Linear regression** with multiple variables to predict the prices of houses
 <div style="text-align:center"><img src ="./figures/1_linear_regression_3d.png" /></div>
