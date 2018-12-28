@@ -107,6 +107,7 @@ Reduce data set dimensions. Used for ata compression or big data visualization.
 </p>
 
 ### Anomaly detection
+Identifies rare items (outliers) which raise suspicions by differing significantly from the majority of the data.
 
 #### 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
 - 🐍 [Demo | Anomaly detection algorithm Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8.ipynb)
@@ -116,6 +117,7 @@ Reduce data set dimensions. Used for ata compression or big data visualization.
 </p>
 
 ### Recommender System
+Predicts the rating or preference a user would give to an item.
 
 #### 11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
 
