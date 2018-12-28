@@ -9,12 +9,12 @@ Since the course uses Octave/Matlab in programming assignments, I reimplemented 
 After that, I've converted each assignment to a Jupyter Notebook that can are available here https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks
 
 ## Algorithms:
-1.  **Linear regression** with one variable to predict proﬁts for a food truck
+1.  **Linear regression** with one variable to predict proﬁts for a food truck https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb 
 <p align="center">
     <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
 </p>
 
-2.  **Regularized Linear regression** with multiple variables to predict the prices of houses
+2.  **Regularized Linear regression** with multiple variables to predict the prices of houses https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1MultiFeatures.ipynb
 <p align="center">
     <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
 </p>
