@@ -9,6 +9,7 @@ Since the course uses Octave/Matlab in programming assignments, I reimplemented 
 After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
 
 ## Algorithms:
+### Supervised learning
 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
 - ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1)
@@ -51,6 +52,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     <img src ="./figures/5_learning_curves.png" alt="learning curves"/>
 </p>
 
+### Unsupervised learning
 7.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
 - ▶️ [Intro Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
