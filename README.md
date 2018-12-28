@@ -3,24 +3,25 @@ All the work done by me as a part of the excellent Stanford University's Machine
 ## Python Implementation
 Since the course uses Octave/Matlab in programming assignments, I reimplemented [all the assignments in Python]( https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python) using only [NumPy](http://www.numpy.org/), [SciPy](https://www.scipy.org/), and [Matplotlib](https://matplotlib.org/).
 After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
-## Supervised Learning - Regression
-### 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
+## Supervised Learning
+### Regression
+#### 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
 - 🐍 [Demo | Linear Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
 - ▶️ [Demo | Linear Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1/ex1.m)
 <p align="center">
     <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
 </p>
 
-### 2.  **Regularized Linear regression** with multiple variables to predict the prices of houses 
+#### 2.  **Regularized Linear regression** with multiple variables to predict the prices of houses 
 - 🐍 [Demo | Linear Regression with multiple variables Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1MultiFeatures.ipynb)
 - ▶️ [Demo | Linear Regression with multiple variables Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_2/ex1/ex1_multi.m)
 <p align="center">
     <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
 </p>
 
-## Supervised Learning - Classification 
+### Classification 
 
-### 3. Regularized logistic regression to predict whether microchips passes quality assurance (QA)
+#### 3. Regularized logistic regression to predict whether microchips passes quality assurance (QA)
 
 - 🐍 [Demo | Regularized Logistic Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_3/ex2_reg.ipynb)
 - ▶️ [Demo | Regularized Logistic Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_3/ex2/ex2_reg.m)
@@ -29,14 +30,14 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     <img src ="./figures/2_logistic_regression.png" alt="Regularized logistic regression"/>
 </p>
 
-### 4.  **Multi-class Logistic regression** to recognize handwritten digits 
+#### 4.  **Multi-class Logistic regression** to recognize handwritten digits 
 - 🐍 [Demo | Multi-class Logistic regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_4/ex3.ipynb)
 - ▶️ [Demo | Multi-class Logistic regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_4/ex3/ex3.m)
 <p align="center">
    <img src ="./figures/3_one_vs_all_classification.png" alt="Multi-class Logistic regression" />
 </p>
 
-### 5.  **Neural Networks** (MLP) to recognize handwritten digits 
+#### 5.  **Neural Networks** (MLP) to recognize handwritten digits 
 - 🐍 [Demo | Neural Networks Notebook Part I](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_4/ex3_nn.ipynb), [Demo | Neural Networks Notebook Part II](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_5/ex4.ipynb)
 - ▶️ [Demo | Neural Networks Matlab Part I](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_4/ex3/ex3_nn.m), [Demo | Neural NetworksMatlab Part II](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_5/ex4/ex4.m)
 <p align="center">
