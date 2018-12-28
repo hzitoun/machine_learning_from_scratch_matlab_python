@@ -4,9 +4,9 @@ All the work done by me as a part of the excellent Stanford University's Machine
 Since the course uses Octave/Matlab in programming assignments, I reimplemented [all the assignments in Python]( https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python) using only [NumPy](http://www.numpy.org/), [SciPy](https://www.scipy.org/), and [Matplotlib](https://matplotlib.org/).
 After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
 ## Supervised Learning
-Given a set of labeled observations, find a function f which can be used to assign a class or value to unseen observations. Predictions should be similar to real labels
+Given a set of labeled observations, find a function f which can be used to assign a class or value to unseen observations. Predictions should be similar to real labels.
 ### Regression
-In a regression problem, we are instead trying to predict results within a **continuous output**, meaning that we are trying to map input variables to some continuous function
+In a regression problem, we are instead trying to predict results within a **continuous output**, meaning that we are trying to map input variables to some continuous function.
 #### 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
 - 🐍 [Demo | Linear Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
 - ▶️ [Demo | Linear Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1/ex1.m)
@@ -22,7 +22,9 @@ In a regression problem, we are instead trying to predict results within a **con
 </p>
 
 ### Classification 
+
 In a classification problem, we are trying to predict results in a **discrete output**. In other words, we are trying to map input variables into discrete categories.
+
 #### 3. Regularized logistic regression to predict whether microchips passes quality assurance (QA)
 
 - 🐍 [Demo | Regularized Logistic Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_3/ex2_reg.ipynb)
@@ -50,9 +52,11 @@ In a classification problem, we are trying to predict results in a **discrete ou
 
 - 🐍 [Demo | Support Vector Machines Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
 - ▶️ [Demo | Support Vector Machines Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
+
 <p align="center">
     <img src ="./figures/6_svms.png" />
 </p>    
+
 - 🐍 [Demo | SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
 - ▶️ [Demo | SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
 
@@ -90,7 +94,7 @@ Group objects in clusters, similar within cluster, dissimilar between clusters.
 
 ### Dimensionality reduction
 
-Reduce data set dimensions.
+Reduce data set dimensions. Used for ata compression or big data visualization.
 
 #### 9.  **Principal Component Analysis (PCA)** to perform dimensionality reduction
 - 🐍 [Demo | Principal Component Analysis Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7_pca.ipynb) 
