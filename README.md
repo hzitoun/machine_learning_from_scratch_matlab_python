@@ -52,10 +52,12 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 </p>
 
 7.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
-- ▶️ [Intro Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb), [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
-- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m), [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
+- ▶️ [Intro Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
 <p align="center">
     <img src ="./figures/6_svms.png" />
+- ▶️ [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
+- ▶️ [SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
     <img src ="./figures/6_spam.png" />
 </p>
 
