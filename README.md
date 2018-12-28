@@ -45,10 +45,21 @@ In a classification problem, we are trying to predict results in a **discrete ou
 <p align="center">
     <img src ="./figures/4_viz_nn.png" alt="Neural Networks"/>
 </p>
+#### 6.  **Support Vector Machines SVM** ( with and without Gaussian Kernels)
+- 🐍 [Demo | Support Vector Machines Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
+- ▶️ [Demo | Support Vector Machines Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
+<p align="center">
+    <img src ="./figures/6_svms.png" />
+</p>    
+- 🐍 [Demo | SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
+- ▶️ [Demo | SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
 
+<p align="center">
+   <img src ="./figures/6_spam.png" />
+</p>
 ## Metrics to evaluate ML algorithms
 
-### 6.  High Bias vs High Variance a.k.a Overfitting vs Underfitting
+### 7.  High Bias vs High Variance a.k.a Overfitting vs Underfitting
 - 🐍 [Demo | High Bias vs High Variance Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_6/ex5.ipynb)
 - ▶️ [Demo | High Bias vs High Variance Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_6/ex5/ex5.m)
 <p align="center">
@@ -56,29 +67,22 @@ In a classification problem, we are trying to predict results in a **discrete ou
 </p>
 
 ## Unsupervised Learning
-### 7.  **Support Vector Machines SVM** ( with and without Gaussian Kernels)
-- 🐍 [Demo | Support Vector Machines Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
-- ▶️ [Demo | Support Vector Machines Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
-<p align="center">
-    <img src ="./figures/6_svms.png" />
-</p>    
-
-- 🐍 [Demo | SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
-- ▶️ [Demo | SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
-
-<p align="center">
-   <img src ="./figures/6_spam.png" />
-</p>
-
-### 8. K-means clustering algorithm for image compression
+Labeling can be tedious (too long, too slow), often done by humans and no real labels to compare.
+Unsupervised learning allows us to approach problems with little or no idea what our results should look like.
+We can derive structure from data where we don't necessarily know the effect of the variables. We can derive this structure by clustering the data based on relationships among the variables in the data.
+With unsupervised learning there is no feedback based on the prediction results.
+### Clustering
+Group objects in clusters, similar within cluster, dissimilar between clusters
+#### 8. K-means clustering algorithm for image compression
 - 🐍 [Demo | K-means Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7.ipynb) 
 - ▶️ [Demo | K-means Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7.m)
 <p align="center">
    <img src ="./figures/7_kmeans.png" />
     <img src ="./figures/7_keams_image_compression.png" />
 </p>
-
-### 9.  **Principal Component Analysis (PCA)** to perform dimensionality reduction
+### Dimensionality reduction
+Reduce data set dimensions
+#### 9.  **Principal Component Analysis (PCA)** to perform dimensionality reduction
 - 🐍 [Demo | Principal Component Analysis Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7_pca.ipynb) 
 - ▶️ [Demo | Principal Component Analysis Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7_pca.m)
 <p align="center">
@@ -87,15 +91,15 @@ In a classification problem, we are trying to predict results in a **discrete ou
 <p align="center">
    <img src ="./figures/8_pca_faces.png" />
 </p>
- 
-### 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
+### Anomaly detection
+#### 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
 - 🐍 [Demo | Anomaly detection algorithm Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8.ipynb)
 - ▶️ [Demo | Anomaly detection algorithm Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_9/ex8/ex8.m)
 <p align="center">
     <img src ="./figures/9_anomaly_detection.png" />
 </p>
-
-### 11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
+### Recommender System
+#### 11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
 - 🐍 [Demo | Collaborative ﬁltering recommender system Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8_cofi.ipynb)
 - ▶️ [Demo | Collaborative ﬁltering recommender system Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_9/ex8/ex8_cofi.m)
 <p align="center">
