@@ -41,7 +41,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     <img src ="./figures/4_viz_nn.png" alt="Neural Networks"/>
 </p>
 
-### 6.  **Metrics To Evaluate Machine Learning Algorithms - Bias vs Variance (Overfitting vs Underfitting)**
+### 6.  Metrics To Evaluate ML Algorithms - Bias vs Variance (Overfitting vs Underfitting)
 - ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_6/ex5.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_6/ex5/ex5.m)
 <p align="center">
