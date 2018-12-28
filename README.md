@@ -59,17 +59,20 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     
 - ▶️ [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
 - ▶️ [SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
-
     <img src ="./figures/6_spam.png" />
 </p>
 
 8.  **K-means** clustering algorithm for image compression
+- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7.ipynb) 
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7.m)
 <p align="center">
    <img src ="./figures/7_kmeans.png" />
     <img src ="./figures/7_keams_image_compression.png" />
 </p>
 
 9.  **Principal component analysis (PCA)** to perform dimensionality reduction
+- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7_pca.ipynb) 
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7_pca.m)
 <p align="center">
  <img src ="./figures/8_pca_datasets_before.png" />
 </p>
