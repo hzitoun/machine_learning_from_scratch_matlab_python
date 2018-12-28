@@ -38,7 +38,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 
 ### 5.  **Neural Networks** (MLP) to recognize handwritten digits 
 - 🐍 [Demo | Neural Networks Notebook Part I](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_4/ex3_nn.ipynb), [Demo | Neural Networks Notebook Part II](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_5/ex4.ipynb)
-- ▶️ [Demo | Neural Networks Matlab Part I](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_4/ex3/ex3_nn.m), [Demo | Neural NetworksMatlab Part II](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_5/ex4/ex4_nn.m)
+- ▶️ [Demo | Neural Networks Matlab Part I](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_4/ex3/ex3_nn.m), [Demo | Neural NetworksMatlab Part II](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_5/ex4/ex4.m)
 <p align="center">
     <img src ="./figures/4_viz_nn.png" alt="Neural Networks"/>
 </p>
