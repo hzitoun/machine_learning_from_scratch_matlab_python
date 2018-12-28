@@ -2,6 +2,12 @@
 All the work done by me as a part of Coursera's Machine Learning Course + A Vectorized Python 🐍 implementation resembling as closely as possible to both provided and personally-completed code in the octave/matlab.
 ## What is this course about?
 It's an excellent Stanford University Coursera course from the leaders of AI. It is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination. 
+
+## 🐍 Python Implementation
+Since the course uses Octave/Matlab in programming assignments, I reimplemented each assignment in Python using only NumPy, SciPy, and Matplotlib https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python
+
+After that, I've converted each assignment to a Jupyter Notebook that can are available here https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks
+
 ## Algorithms:
 1.  **Linear regression** with one variable to predict proﬁts for a food truck
 <p align="center">
@@ -63,9 +69,6 @@ It's an excellent Stanford University Coursera course from the leaders of AI. It
     <img src ="./figures/9_collaborative_filtering.png" />
 </p>
 
-## 🐍 Python Implementation
-Since the course uses Octave/Matlab in programming assignments, I wanted to reimplement each assignment in Python using only NumPy, SciPy, and Matplotlib
-https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python
 ## Matlab Implementation
 Assignments in Matlab
 https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_matlab
