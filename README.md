@@ -1,20 +1,23 @@
 # ML Course By Stanford University On Coursera
-All the work done by me as a part of Coursera's Machine Learning Course + A Vectorized Python 🐍 implementation resembling as closely as possible to both provided and personally-completed code in the octave/matlab.
+All the work done by me as a part of Coursera's Machine Learning Course + A Vectorized Python 🐍 implementation resembling **as closely as possible** to both provided and personally-completed code in the octave/matlab.
 ## What is this course about?
 It's an excellent Stanford University Coursera course on machine learning and the maths behind. It is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination. 
 
 ## 🐍 Python Implementation
-Since the course uses Octave/Matlab in programming assignments, I reimplemented each assignment in Python using only NumPy, SciPy, and Matplotlib https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python
+Since the course uses Octave/Matlab in programming assignments, I reimplemented [all the assignments in Python]( https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python) using only NumPy, SciPy, and Matplotlib.
 
-After that, I've converted each assignment to a Jupyter Notebook that can are available here https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks
+After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
 
 ## Algorithms:
-1.  **Linear regression** with one variable to predict proﬁts for a food truck https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb 
+1.  **Linear regression** with one variable to predict proﬁts for a food truck 
+- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1)
 <p align="center">
     <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
 </p>
 
-2.  **Regularized Linear regression** with multiple variables to predict the prices of houses https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1MultiFeatures.ipynb
+2.  **Regularized Linear regression** with multiple variables to predict the prices of houses 
+- ▶️ [Notebook](https://www.google.comhttps://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1MultiFeatures.ipynb)
 <p align="center">
     <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
 </p>
