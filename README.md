@@ -13,14 +13,14 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
 </p>
 
-### 2.  **Regularized Multi features Linear regression** with multiple variables to predict the prices of houses 
+### 2.  **Regularized Linear regression** with multiple variables to predict the prices of houses 
 - ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1MultiFeatures.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_2/ex1/ex1_multi.m)
 <p align="center">
     <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
 </p>
  
-### 3.  **Regularized logistic regression** to predict whether microchips from a fabrication plant passes quality assurance (QA)
+### 3.  **Regularized logistic regression** to predict whether microchips passes quality assurance (QA)
 - ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_3/ex2_reg.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_3/ex2/ex2_reg.m)
 <p align="center">
