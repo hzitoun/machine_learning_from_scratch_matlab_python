@@ -6,7 +6,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 ## Supervised Learning - Regression
 ### 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
 - 🐍 [Demo | Linear Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
-- ▶️ [Demo | Linear Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1)
+- ▶️ [Demo | Linear Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1/ex1.m)
 <p align="center">
     <img src ="./figures/1_linear_regression.png" alt="Linear regression with one variable"/>
 </p>
