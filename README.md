@@ -41,7 +41,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
     <img src ="./figures/4_viz_nn.png" alt="Neural Networks"/>
 </p>
 
-### 6.  **Metrics To Evaluate Machine Learning Algorithms - High Bias v.s. High Variance (Overfitting vs Underfitting)**
+### 6.  **Metrics To Evaluate Machine Learning Algorithms - Bias vs Variance (Overfitting vs Underfitting)**
 - ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_6/ex5.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_6/ex5/ex5.m)
 <p align="center">
@@ -49,7 +49,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 </p>
 
 ## Unsupervised learning
-### 7.  **Support vector machines SVM** ( with and without Gaussian Kernels) to classify email (spam or not spam)
+### 7.  **Support vector machines SVM** ( with and without Gaussian Kernels)
 - ▶️ [Intro Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
 - ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
 <p align="center">
@@ -57,7 +57,8 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 </p>    
 - ▶️ [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
 - ▶️ [SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
-<p>
+
+<p align="center">
    <img src ="./figures/6_spam.png" />
 </p>
 
