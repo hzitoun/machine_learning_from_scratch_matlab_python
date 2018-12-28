@@ -81,15 +81,15 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 </p>
  
 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
+- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8.ipynb)
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_9/ex8/ex8.m)
 <p align="center">
     <img src ="./figures/9_anomaly_detection.png" />
 </p>
 
 11. **Collaborative ﬁltering recommender system** applied to a dataset of movie ratings
+- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8_cofi.ipynb)
+- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_9/ex8/ex8_cofi.m)
 <p align="center">
     <img src ="./figures/9_collaborative_filtering.png" />
 </p>
-
-## Matlab Implementation
-Assignments in Matlab
-https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_matlab
