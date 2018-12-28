@@ -48,29 +48,29 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 ## Metrics to evaluate ML algorithms
 
 ### 6.  High Bias vs High Variance a.k.a Overfitting vs Underfitting
-- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_6/ex5.ipynb)
-- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_6/ex5/ex5.m)
+- ▶️ [Demo | High Bias vs High Variance Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_6/ex5.ipynb)
+- ▶️ [Demo | High Bias vs High Variance Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_6/ex5/ex5.m)
 <p align="center">
     <img src ="./figures/5_learning_curves.png" alt="learning curves"/>
 </p>
 
-## Unsupervised learning
-### 7.  **Support vector machines SVM** ( with and without Gaussian Kernels)
-- ▶️ [Intro Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
-- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
+## Unsupervised Learning
+### 7.  **Support Vector Machines SVM** ( with and without Gaussian Kernels)
+- ▶️ [Demo | Support Vector Machines Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6.ipynb)
+- ▶️ [Demo | Support Vector Machines Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6.m)
 <p align="center">
     <img src ="./figures/6_svms.png" />
 </p>    
-- ▶️ [SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
-- ▶️ [SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
+- ▶️ [Demo | SVM for Spam Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_7/ex6_spam.ipynb)
+- ▶️ [Demo | SVM for Spam Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_7/ex6/ex6_spam.m)
 
 <p align="center">
    <img src ="./figures/6_spam.png" />
 </p>
 
-### 8.  **K-means** clustering algorithm for image compression
-- ▶️ [Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7.ipynb) 
-- ▶️ [Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7.m)
+### 8. K-means clustering algorithm for image compression
+- ▶️ [Demo | K-means Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_8/ex7.ipynb) 
+- ▶️ [Demo | K-means Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_8/ex7/ex7.m)
 <p align="center">
    <img src ="./figures/7_kmeans.png" />
     <img src ="./figures/7_keams_image_compression.png" />
