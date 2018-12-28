@@ -5,7 +5,7 @@ It's an excellent Stanford University Coursera course on machine learning and al
 ## 🐍 Python Implementation
 Since the course uses Octave/Matlab in programming assignments, I reimplemented [all the assignments in Python]( https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python) using only NumPy, SciPy, and Matplotlib.
 After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
-## Supervised learning - Regression
+## Supervised Learning - Regression
 ### 1.  **Linear regression** with one variable to predict proﬁts for a food truck 
 - ▶️ [Demo | Linear Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_2/ex1.ipynb) 
 - ▶️ [Demo | Linear Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/algorithms_in_matlab/week_2/ex1)
@@ -19,10 +19,14 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 <p align="center">
     <img src ="./figures/1_linear_regression_3d.png" alt="Regularized Linear regression with multiple variables"/>
 </p>
-## Supervised learning - Classification 
-### 3.  **Regularized logistic regression** to predict whether microchips passes quality assurance (QA)
+
+## Supervised Learning - Classification 
+
+### 3. Regularized logistic regression to predict whether microchips passes quality assurance (QA)
+
 - ▶️ [Demo | Regularized Logistic Regression Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_3/ex2_reg.ipynb)
 - ▶️ [Demo | Regularized Logistic Regression Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_3/ex2/ex2_reg.m)
+
 <p align="center">
     <img src ="./figures/2_logistic_regression.png" alt="Regularized logistic regression"/>
 </p>
