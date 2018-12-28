@@ -88,7 +88,7 @@ After that, I've converted each assignment to a [Jupyter Notebooks](https://gith
 </p>
  
 ### 10.  **Anomaly detection algorithm** to detect anomalous behavior in server computers of a data center
-- ▶️ [Demo | Anomaly detection algorithm Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8.ipynb)
+- 🐍 [Demo | Anomaly detection algorithm Notebook](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/jupyter_notebooks/week_9/ex8.ipynb)
 - ▶️ [Demo | Anomaly detection algorithm Matlab](https://github.com/hzitoun/coursera_machine_learning_matlab_python/blob/master/algorithms_in_matlab/week_9/ex8/ex8.m)
 <p align="center">
     <img src ="./figures/9_anomaly_detection.png" />
