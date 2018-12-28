@@ -1,7 +1,5 @@
 # Machine learning in python from Scratch 
-All the work done by me as a part of Coursera's Machine Learning Course + A Vectorized Python implementation resembling **as closely as possible** to both provided and personally-completed code in the octave/matlab.
-## What is this course about?
-It's an excellent Stanford University Coursera course on machine learning and all the maths behind. It is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination. 
+All the work done by me as a part of the excellent Stanford University's Machine Learning Course on Coursera + A Vectorized Python implementation resembling **as closely as possible** to both provided and personally-completed code in the octave/matlab. The course is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination
 ## Python Implementation
 Since the course uses Octave/Matlab in programming assignments, I reimplemented [all the assignments in Python]( https://github.com/hzitoun/coursera_machine_learning_course/tree/master/algorithms_in_python) using only NumPy, SciPy, and Matplotlib.
 After that, I've converted each assignment to a [Jupyter Notebooks](https://github.com/hzitoun/coursera_machine_learning_matlab_python/tree/master/jupyter_notebooks).
