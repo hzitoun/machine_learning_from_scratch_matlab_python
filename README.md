@@ -1,9 +1,10 @@
 # Machine Learning in Python From scratch 
+
 A Vectorized Python 🐍 implementation using only [NumPy](http://www.numpy.org/), [SciPy](https://www.scipy.org/), and [Matplotlib](https://matplotlib.org/) resembling **as closely as possible** to both provided and personally-completed code in the octave/matlab as part of the excellent Stanford University's Machine Learning Course on Coursera. 
 The course is taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng) a genius and an excellent popularizer, which is a rare combination.
 
 This course helped me write a blog answering the following question [What is Machine Learning?](https://www.linkedin.com/pulse/common-machine-learning-algorithms-hamed-zitoun/)
-
+___
 ## Supervised Learning
 Given a set of labeled observations, find a function f which can be used to assign a class or value to unseen observations. Predictions should be similar to real labels.
 ### Regression
